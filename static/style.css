@@ -1,78 +1,117 @@
-/* General body styling */
+/* Full-screen glossy black-red background */
 body {
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  background: linear-gradient(135deg, #f5f7fa, #c3cfe2);
-  color: #333;
-  padding: 20px;
   margin: 0;
+  padding: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background: radial-gradient(circle at center, #1a0000, #000000 80%);
+  color: #f2f2f2;
+  min-height: 100vh;
+  display: block;
+  overflow-x: hidden;
+  overflow-y: auto; /* allow scrolling if needed */
+  box-sizing: border-box;
 }
 
-/* Container for the form */
+.wrapper {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center; /* center vertically */
+  padding: 60px 20px;   /* top and bottom padding to avoid clipping */
+  box-sizing: border-box;
+}
+
+/* Shiny glass container */
 .container {
+  background: rgba(20, 2, 2, 0.6);
+  border: 1px solid rgba(255, 0, 0, 0.3);
+  backdrop-filter: blur(15px);
+  -webkit-backdrop-filter: blur(15px);
+  padding: 40px;
+  border-radius: 20px;
+  width: 90%;
   max-width: 600px;
-  background: white;
-  margin: 40px auto;
-  padding: 30px;
-  border-radius: 15px;
-  box-shadow: 0 8px 16px rgba(0,0,0,0.1);
+  box-shadow: 0 0 25px rgba(255, 0, 0, 0.3), inset 0 0 10px rgba(255, 0, 0, 0.1);
 }
 
-/* Headings */
+/* Headers with neon red glow */
 h1, h2 {
   text-align: center;
-  color: #2c3e50;
-  margin-bottom: 20px;
+  color: #ff1a1a;
+  font-weight: 700;
+  margin-bottom: 30px;
+  text-shadow: 0 0 10px rgba(255, 26, 26, 0.8);
 }
 
-/* Input labels and fields */
+/* Form labels */
 label {
   display: block;
-  margin-top: 15px;
-  font-weight: 500;
-  color: #2c3e50;
+  margin-top: 20px;
+  font-size: 15px;
+  color: #e0e0e0;
 }
 
+/* Inputs and dropdowns */
 input, select {
   width: 100%;
-  padding: 10px 12px;
+  padding: 12px;
+  border-radius: 12px;
+  border: 1px solid #990000;
+  background: rgba(0, 0, 0, 0.8);
+  color: #ffffff;
   margin-top: 8px;
-  border: 1px solid #ccc;
-  border-radius: 8px;
-  box-sizing: border-box;
   font-size: 14px;
+  box-shadow: inset 0 0 5px rgba(255, 0, 0, 0.3);
+  transition: all 0.3s ease;
 }
 
-/* Button styling */
+input:focus, select:focus {
+  outline: none;
+  border-color: #ff1a1a;
+  box-shadow: 0 0 8px rgba(255, 0, 0, 0.6);
+}
+
+/* Glowing red button */
 button {
-  background-color: #3498db;
-  color: white;
-  padding: 12px 20px;
-  margin-top: 20px;
-  border: none;
-  border-radius: 8px;
+  margin-top: 30px;
   width: 100%;
+  padding: 14px;
+  background: linear-gradient(to right, #ff1a1a, #cc0000);
+  color: white;
   font-size: 16px;
+  font-weight: bold;
+  border: none;
+  border-radius: 14px;
   cursor: pointer;
-  transition: 0.3s;
+  box-shadow: 0 0 12px rgba(255, 0, 0, 0.4);
+  transition: all 0.3s ease-in-out;
 }
 
 button:hover {
-  background-color: #2980b9;
+  background: linear-gradient(to right, #ff4d4d, #e60000);
+  box-shadow: 0 0 18px rgba(255, 0, 0, 0.6);
+  transform: scale(1.03);
 }
 
-/* Prediction result */
+/* Result box with red border-glow */
 .result {
+  margin-top: 30px;
+  padding: 20px;
+  background: rgba(255, 0, 0, 0.05);
+  border: 1px solid rgba(255, 0, 0, 0.4);
+  border-radius: 14px;
   text-align: center;
-  font-size: 20px;
+  font-size: 18px;
+  color: #ff8080;
   font-weight: bold;
-  margin-top: 25px;
-  color: #27ae60;
+  box-shadow: 0 0 10px rgba(255, 0, 0, 0.2);
 }
 
-/* Footer */
+/* Small footer if needed */
 .footer {
   text-align: center;
-  margin-top: 40px;
-  font-size: 14px;
-  color: #888;
+  margin-top: 20px;
+  font-size: 13px;
+  color: #777;
 }
+
