@@ -1,5 +1,10 @@
 <html>
 <body>
+<head>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
+</head>
+
+
     <div class="login">
        <h1>Student Exam Performance Indicator</h1>
    
@@ -101,7 +106,7 @@
                 placeholder="Enter your Reading Score" min='0' max='100' />
         </div>
         <div class="mb-3">
-            <input class="btn btn-primary" type="submit" value="Predict your Maths Score" required />
+            <input class="btn btn-primary" type="submit" value="Predict your Score" required />
         </div>
     </form>
     <h2>
